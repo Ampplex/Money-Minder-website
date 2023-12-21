@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script defer src="app.js"></script>
+  <title>Moneyminder</title>
+</head>
+
+<body class="body">
+  <div class="container">
+    <div class="navbar">
+      <div class="icon-container">
+        <img class="icon" src="./ExpenseLogo.jpg" width="60" height="60" />
+      </div>
+      <h1 style="color: #fff; padding: 10px; margin-left: 110px;">Moneyminder</h1>
+      <h5 style="color: #fff; padding: 10px;  position: absolute; right: 230px">
+        <a style="color: #fff; text-decoration: none;" href="https://sites.google.com/view/money-minder/home">Account
+          deletion</a>
+      </h5>
+      <h5 style="color: #fff; padding: 10px; margin-right: 80px; padding-right: 20px;">
+        <a style="color: #fff; text-decoration: none;"
+          href="https://sites.google.com/view/money-minder-privacy-policy/home">Priacy
+          Policy</a>
+      </h5>
+
+    </div>
+
+    <div id="lottie-container" />
+
+    <div class="welcome-container">
+      <h2 class="welcome">Welcome to Money Minder</h2>
+    </div>
+
+    <div class="get-started-container">
+      <h3 class="get-started"><a href="./Apk file money minder.apk" style="color: #fff; text-decoration: none;">Download
+          our App</a></h3>
+    </div>
+  </div>
+
+  <div class="hidden">
+    <div class="rectangle-1">
+
+      <div class="Menu-rec-1">
+        <p class="bank-accounts">
+          <img alt="" class="vector-one"
+            src="https://static.overlay-tech.com/assets/9b7fb386-2571-43e8-9941-31456d575fc8.svg" /> DASHBOARD
+        </p>
+
+        <p class="bank-accounts">
+          <img alt="" class="vector-one"
+            src="https://static.overlay-tech.com/assets/9b7fb386-2571-43e8-9941-31456d575fc8.svg" /> S I P
+        </p>
+
+        <p class="bank-accounts">
+          <img alt="" class="vector-two"
+            src="https://static.overlay-tech.com/assets/8a07debc-0e95-4ade-bb2e-ad9d292e6cab.svg" />
+
+          TRANSACTIONS
+        </p>
+
+        <p class="bank-accounts">
+
+          <img alt="" class="vector-three"
+            src="https://static.overlay-tech.com/assets/56a8f69d-36a9-4f20-a07f-704414d7374c.svg" />
+
+          BANK ACCOUNTS
+        </p>
+
+        <p class="bank-accounts">
+          <img alt="" class="vector-four"
+            src="https://static.overlay-tech.com/assets/a5672ead-c9ee-4b39-9111-a48881333c94.svg" />CARD
+        </p>
+
+
+        <p class="bank-accounts">
+          <img alt="" class="vector-six"
+            src="https://static.overlay-tech.com/assets/369e42fc-4780-409b-ab8a-f0ade392832e.svg" />SETTINGS
+        </p>
+
+
+      </div>
+
+    </div>
+
+    <div class="flex-wrapper-two">
+      <div class="flex-wrapper-four">
+
+        <div class="rectangle-5">
+          <p class="current-balance" style="text-align: center">Current Balance</p>
+          <h2 style="text-align: center; color: rgb(102, 90, 76);">82500$</h2>
+        </div>
+        <div class="rectangle-6">
+          <p class="current-balance" style="text-align: center;">Total Income</p>
+          <h2 style="text-align: center;  color: rgb(102, 90, 76);">1200$</h2>
+        </div>
+        <div class="rectangle-7">
+          <p class="current-balance" style="text-align: center;">Total Expenses</p>
+          <h2 style="text-align: center;  color: rgb(102, 90, 76);">5210$</h2>
+        </div>
+      </div>
+
+      <div class="rectangle-2">
+        <p class="latest-transactions">Latest Transactions</p>
+        <div>
+          <canvas id="barchart" class="barchart"></canvas>
+        </div>
+      </div>
+      <div class="rectangle-3">
+        <p class="Amount-Transfer">Amount Transfer</p>
+        <div class="doughnut">
+          <canvas id="doughnut"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Include Lottie library FIRST -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+  <!-- Then, load and run your script that uses Lottie -->
+  <script>
+    // Replace 'your-animation.json' with the path to your JSON animation file
+    const animationData = '../animations/home.json';
+
+    // Replace 'lottie-container' with the ID of your container
+    const container = document.getElementById('lottie-container');
+    const getStarted = document.querySelector(".get-started-container");
+
+    getStarted.addEventListener('click', () => {
+      document.location.href = './login.html';
+    })
+
+    // Load the animation
+    const animation = lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData,
+    });
+  </script>
+
+</body>
+
+</html>

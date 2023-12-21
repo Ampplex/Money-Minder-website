@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100vw;
+  height: 100px;
+  background-color: #59C7BA;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  border-radius: 10px;
+}
+
+#lottie-container {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 30%;
+}
+
+.welcome {
+  position: absolute;
+  color: #fff;
+  left: 5%;
+}
+
+.welcome-container {
+  background-color: #b0c3ff;
+  height: 40px;
+  top: 350px;
+  position: absolute;
+  width: 450px;
+  height: 40px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.get-started-container {
+  background-color: #b0c3ff;
+  top: 420px;
+  position: absolute;
+  width: 280px;
+  height: 43px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  left: 25%;
+}
+
+.get-started {
+  height: 40px;
+  width: 450px;
+  height: 40px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  position: absolute;
+  top: 5px;
+  color: #fff;
+}
